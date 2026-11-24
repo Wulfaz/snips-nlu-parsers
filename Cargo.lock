@@ -199,12 +199,12 @@ dependencies = [
 
 [[package]]
 name = "gazetteer-entity-parser"
-version = "0.9.0"
-source = "git+https://github.com/snipsco/gazetteer-entity-parser?tag=0.9.0#b4bc734927f3c3aeec62f4381f05ee85d41ad37c"
+version = "0.8.0"
+source = "git+https://github.com/snipsco/gazetteer-entity-parser?tag=0.8.0#0e117818081782d1f295376f4cb3e1bb084e397c"
 dependencies = [
  "failure",
  "fnv",
- "rmp-serde 1.3.1",
+ "rmp-serde 0.13.7",
  "serde",
  "serde_json",
 ]
@@ -417,9 +417,7 @@ dependencies = [
 
 [[package]]
 name = "rmp-serde"
-version = "0.14.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ce7d70c926fe472aed493b902010bccc17fa9f7284145cb8772fd22fdb052d8"
+version = "0.13.7"
 dependencies = [
  "byteorder",
  "rmp",
@@ -428,10 +426,11 @@ dependencies = [
 
 [[package]]
 name = "rmp-serde"
-version = "1.3.1"
+version = "0.14.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72f81bee8c8ef9b577d1681a70ebbc962c232461e397b22c208c43c04b67a155"
+checksum = "4ce7d70c926fe472aed493b902010bccc17fa9f7284145cb8772fd22fdb052d8"
 dependencies = [
+ "byteorder",
  "rmp",
  "serde",
 ]
@@ -744,23 +743,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "snips-nlu-parsers"
-version = "0.4.3"
-source = "git+https://github.com/pguyot/snips-nlu-parsers?tag=0.4.3-2024#cacc4962af11e726cadaa9d025fa582f9a16544c"
-dependencies = [
- "failure",
- "gazetteer-entity-parser",
- "itertools",
- "lazy_static",
- "regex",
- "rustling-ontology",
- "serde",
- "serde_json",
- "snips-nlu-ontology",
- "snips-nlu-utils",
-]
-
-[[package]]
 name = "snips-nlu-parsers-ffi"
 version = "0.4.3"
 dependencies = [
@@ -769,7 +751,7 @@ dependencies = [
  "libc",
  "snips-nlu-ontology",
  "snips-nlu-ontology-ffi-macros",
- "snips-nlu-parsers-ffi-macros 0.4.3",
+ "snips-nlu-parsers-ffi-macros",
 ]
 
 [[package]]
@@ -783,22 +765,7 @@ dependencies = [
  "serde_json",
  "snips-nlu-ontology",
  "snips-nlu-ontology-ffi-macros",
- "snips-nlu-parsers 0.4.3",
-]
-
-[[package]]
-name = "snips-nlu-parsers-ffi-macros"
-version = "0.4.3"
-source = "git+https://github.com/pguyot/snips-nlu-parsers?tag=0.4.3-2024#cacc4962af11e726cadaa9d025fa582f9a16544c"
-dependencies = [
- "failure",
- "ffi-utils",
- "libc",
- "serde",
- "serde_json",
- "snips-nlu-ontology",
- "snips-nlu-ontology-ffi-macros",
- "snips-nlu-parsers 0.4.3 (git+https://github.com/pguyot/snips-nlu-parsers?tag=0.4.3-2024)",
+ "snips-nlu-parsers",
 ]
 
 [[package]]
@@ -810,7 +777,7 @@ dependencies = [
  "libc",
  "snips-nlu-ontology",
  "snips-nlu-ontology-ffi-macros",
- "snips-nlu-parsers-ffi-macros 0.4.3 (git+https://github.com/pguyot/snips-nlu-parsers?tag=0.4.3-2024)",
+ "snips-nlu-parsers-ffi-macros",
 ]
 
 [[package]]
