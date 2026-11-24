@@ -11,6 +11,7 @@ members = [
     "ffi/ffi-macros",
     "python/ffi"
 ]
+exclude = ["vendor"]
 
 [dependencies]
 failure = "0.1"
@@ -26,3 +27,8 @@ snips-nlu-utils = { git = "https://github.com/snipsco/snips-nlu-utils", tag = "0
 
 [dev-dependencies]
 tempfile = "3.0"
+
+# rmp-serde 0.13.x is yanked from crates.io but required by
+# gazetteer-entity-parser 0.8.0: see vendor/rmp-serde-0.13.7/VENDORED.md
+[patch.crates-io]
+rmp-serde = { path = "vendor/rmp-serde-0.13.7" }
