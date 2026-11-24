@@ -211,7 +211,7 @@ impl BuiltinEntityParser {
         &mut self,
         entity_kind: BuiltinGazetteerEntityKind,
         entity_values: impl Iterator<Item = EntityValue>,
-    ) -> Result<Vec<u32>> {
+    ) -> Result<()> {
         self.gazetteer_parser
             .as_mut()
             .map(|gazetteer_parser| {
